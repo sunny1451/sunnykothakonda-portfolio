@@ -1,0 +1,297 @@
+.resume-main-card {
+  padding: 3rem;
+  border-color: rgba(209, 31, 31, 0.4);
+  background: rgba(16, 12, 16, 0.85);
+}
+
+.resume-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+/* Left Info Panel */
+.resume-identity-header {
+  margin-bottom: 1.8rem;
+}
+
+.resume-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  color: var(--crimson-light);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.candidate-name {
+  font-family: var(--font-title);
+  font-size: 2.6rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  margin: 0.3rem 0;
+  line-height: 1;
+}
+
+.candidate-role {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  color: var(--crimson-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.4rem;
+}
+
+.candidate-domains {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: #ff9999;
+  font-weight: 500;
+}
+
+.candidate-domains .dot {
+  color: var(--text-faint);
+  margin: 0 0.35rem;
+}
+
+.resume-highlights-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 2.2rem;
+}
+
+.r-highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+}
+
+.r-check {
+  color: var(--crimson-light);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.r-highlight-item strong {
+  display: block;
+  font-size: 0.92rem;
+  color: #ffffff;
+  margin-bottom: 0.2rem;
+}
+
+.r-highlight-item p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+  margin: 0;
+  font-weight: 300;
+}
+
+.resume-action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.ext-icon {
+  opacity: 0.7;
+  margin-left: 2px;
+}
+
+.resume-pdf-note {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.info-icon {
+  color: var(--crimson-primary);
+  flex-shrink: 0;
+}
+
+/* Right: Preview Window */
+.preview-terminal-window {
+  background: #0d0d12;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  margin-bottom: 1.5rem;
+}
+
+.preview-top-bar {
+  background: #181820;
+  padding: 0.5rem 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.p-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+.p-dot.red { background: #ff5f56; }
+.p-dot.yellow { background: #ffbd2e; }
+.p-dot.green { background: #27c93f; }
+
+.preview-filename {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: #ccc;
+  margin-left: 0.5rem;
+}
+
+.preview-paper-surface {
+  padding: 1.8rem;
+  background: #09090e;
+  position: relative;
+  font-family: var(--font-mono);
+}
+
+.paper-name {
+  font-family: var(--font-title);
+  font-size: 1.35rem;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.paper-sub {
+  font-size: 0.72rem;
+  color: var(--crimson-light);
+  letter-spacing: 1px;
+  margin: 0.2rem 0;
+  font-weight: 600;
+}
+
+.paper-meta {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+}
+
+.paper-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 1rem 0;
+}
+
+.paper-section-block {
+  margin-bottom: 1rem;
+}
+
+.paper-sec-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+  margin-bottom: 0.3rem;
+  border-bottom: 1px solid rgba(209, 31, 31, 0.3);
+  padding-bottom: 2px;
+  width: fit-content;
+}
+
+.paper-sec-text {
+  font-size: 0.68rem;
+  color: #a4b0be;
+  line-height: 1.5;
+}
+
+.paper-sec-bullets {
+  font-size: 0.68rem;
+  color: #a4b0be;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.paper-overlay-cta {
+  margin-top: 1.2rem;
+  text-align: center;
+}
+
+/* Location Guide Banner */
+.pdf-location-guide {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px dashed rgba(209, 31, 31, 0.4);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+}
+
+.guide-title {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.guide-path-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  padding: 0.4rem 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.guide-path-box code {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: #2ed573;
+}
+
+.guide-copy-btn {
+  background: transparent;
+  border: none;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--crimson-light);
+  cursor: pointer;
+  padding: 0.15rem 0.4rem;
+}
+
+.guide-copy-btn:hover {
+  text-decoration: underline;
+}
+
+.guide-hint {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .resume-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .resume-main-card {
+    padding: 1.8rem 1.25rem;
+  }
+  .candidate-name {
+    font-size: 2rem;
+  }
+  .candidate-role {
+    font-size: 1.25rem;
+  }
+  .resume-action-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

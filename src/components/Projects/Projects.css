@@ -1,0 +1,103 @@
+.projects-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.filter-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-pill);
+  background: rgba(20, 20, 26, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary);
+  font-family: var(--font-main);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: all var(--transition-fast);
+}
+
+.filter-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.filter-tab-btn.active {
+  background: rgba(209, 31, 31, 0.22);
+  border-color: var(--crimson-primary);
+  color: #fff;
+  box-shadow: 0 0 15px rgba(209, 31, 31, 0.35);
+}
+
+.tab-counter {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+}
+
+.filter-tab-btn.active .tab-counter {
+  background: var(--crimson-primary);
+  color: #fff;
+}
+
+.projects-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+/* Lab disclaimer box */
+.lab-disclaimer-box {
+  background: rgba(14, 10, 14, 0.85);
+  border: 1px solid rgba(209, 31, 31, 0.3);
+  padding: 1.5rem 2rem;
+}
+
+.disclaimer-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.disclaimer-icon {
+  color: var(--crimson-primary);
+}
+
+.disclaimer-header h4 {
+  font-family: var(--font-title);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #fff;
+  margin: 0;
+}
+
+.lab-disclaimer-box p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 300;
+}
+
+@media (max-width: 1200px) {
+  .projects-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

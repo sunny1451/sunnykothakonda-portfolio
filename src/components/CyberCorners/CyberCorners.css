@@ -1,0 +1,61 @@
+.cyber-corners-hud {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 90;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.corner-bracket {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  opacity: 0.55;
+  transition: opacity 0.3s ease;
+}
+
+.corner-bracket.top-left {
+  top: 14px;
+  left: 16px;
+}
+
+.corner-bracket.top-right {
+  top: 14px;
+  right: 16px;
+}
+
+.corner-bracket.bottom-left {
+  bottom: 14px;
+  left: 16px;
+}
+
+.corner-bracket.bottom-right {
+  bottom: 14px;
+  right: 16px;
+}
+
+.bracket-svg svg {
+  display: block;
+  filter: drop-shadow(0 0 4px rgba(209, 31, 31, 0.4));
+}
+
+.corner-text {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .corner-text {
+    display: none;
+  }
+  .corner-bracket {
+    opacity: 0.35;
+  }
+}

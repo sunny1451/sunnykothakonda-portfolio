@@ -1,0 +1,257 @@
+.about-experience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.exp-card {
+  padding: 2rem;
+  border-color: rgba(209, 31, 31, 0.35);
+  display: flex;
+  flex-direction: column;
+}
+
+.exp-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.exp-icon-wrap {
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-md);
+  background: rgba(209, 31, 31, 0.15);
+  border: 1px solid rgba(209, 31, 31, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--crimson-light);
+  flex-shrink: 0;
+}
+
+.exp-icon-wrap.trophy-icon {
+  background: rgba(255, 209, 102, 0.12);
+  border-color: rgba(255, 209, 102, 0.4);
+  color: #ffd166;
+}
+
+.exp-meta-block {
+  flex: 1;
+}
+
+.exp-status-tag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #2ed573;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+
+.exp-status-tag.prize-tag {
+  color: #ffd166;
+}
+
+.exp-role {
+  font-family: var(--font-title);
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  margin: 0 0 0.25rem 0;
+}
+
+.exp-org {
+  font-size: 0.88rem;
+  color: var(--crimson-light);
+  font-weight: 500;
+}
+
+.exp-duration {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+.exp-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.exp-bullets li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.bullet-arrow {
+  color: var(--crimson-light);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.achievement-card {
+  border-color: rgba(255, 209, 102, 0.35);
+  background: rgba(18, 14, 10, 0.8);
+}
+
+/* 3 Pillars Grid */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.about-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: rgba(209, 31, 31, 0.12);
+  border: 1px solid rgba(209, 31, 31, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--crimson-light);
+  margin-bottom: 1.2rem;
+}
+
+.highlighted-about-card {
+  border-color: rgba(209, 31, 31, 0.5);
+  background: rgba(22, 12, 16, 0.85);
+  box-shadow: 0 0 25px rgba(209, 31, 31, 0.15);
+}
+
+.about-card-title {
+  font-family: var(--font-title);
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+
+.about-card-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  font-weight: 300;
+  margin-bottom: 1.4rem;
+  flex: 1;
+}
+
+.about-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+/* Quote Banner */
+.quote-banner {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  background: rgba(18, 10, 14, 0.85);
+  border: 1px solid rgba(209, 31, 31, 0.35);
+}
+
+.quote-left {
+  position: relative;
+}
+
+.big-quote {
+  font-family: Georgia, serif;
+  font-size: 3.8rem;
+  line-height: 0.8;
+  color: var(--crimson-primary);
+  opacity: 0.8;
+  display: block;
+}
+
+.quote-body {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 0.9rem;
+}
+
+.highlight-red {
+  color: var(--crimson-light);
+  font-weight: 600;
+}
+
+.quote-signature {
+  font-family: var(--font-script);
+  font-size: 3rem;
+  color: #ff7575;
+  text-shadow: 0 0 15px rgba(209, 31, 31, 0.35);
+  margin-bottom: 0.75rem;
+}
+
+.quote-creed {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  border-left: 2px solid var(--crimson-primary);
+  padding-left: 0.75rem;
+}
+
+.quote-creed .slash {
+  color: var(--crimson-primary);
+  margin: 0 0.3rem;
+}
+
+.quote-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.interests-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--crimson-light);
+  text-transform: uppercase;
+}
+
+.interests-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+  .about-experience-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .quote-banner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

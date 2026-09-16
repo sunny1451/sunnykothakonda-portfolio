@@ -1,0 +1,298 @@
+:root {
+  --bg-primary: #07070a;
+  --bg-secondary: #0d0d14;
+  --bg-card: rgba(14, 14, 20, 0.78);
+  --bg-card-hover: rgba(22, 16, 24, 0.88);
+  --bg-glass: rgba(18, 18, 24, 0.65);
+  
+  --crimson-primary: #d11f1f;
+  --crimson-glow: rgba(209, 31, 31, 0.45);
+  --crimson-light: #ff4757;
+  --crimson-subtle: rgba(209, 31, 31, 0.12);
+  --crimson-border: rgba(209, 31, 31, 0.35);
+
+  --term-green: #2ed573;
+  --term-cyan: #00d2d3;
+  --term-yellow: #ffd166;
+  --term-purple: #c77dff;
+
+  --text-primary: #ffffff;
+  --text-secondary: #d1d1d6;
+  --text-muted: #8e8e99;
+  --text-faint: #5a5a66;
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-active: rgba(209, 31, 31, 0.6);
+
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-title: 'Oswald', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+  --font-script: 'Dancing Script', cursive;
+
+  --header-height: 72px;
+  --container-max: 1240px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-pill: 9999px;
+  
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Cyberpunk Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #240d11;
+  border-radius: 4px;
+  border: 1px solid rgba(209, 31, 31, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--crimson-primary);
+  box-shadow: 0 0 10px var(--crimson-glow);
+}
+
+/* Subtle Cyberpunk Ambient Scanline & Grid overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: 
+    linear-gradient(rgba(209, 31, 31, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(209, 31, 31, 0.015) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Global Container */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Section Shared Styling */
+.section {
+  padding: 5.5rem 0;
+  position: relative;
+  z-index: 10;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.section-header {
+  margin-bottom: 2.8rem;
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--crimson-light);
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.section-tag::before {
+  content: '//';
+  color: var(--crimson-primary);
+  font-weight: 700;
+}
+
+.section-title {
+  font-family: var(--font-title);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  color: #ffffff;
+}
+
+.section-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(209, 31, 31, 0.6), transparent);
+  max-width: 360px;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  max-width: 720px;
+  margin-top: 0.7rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.72rem 1.5rem;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-main);
+  font-size: 0.86rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  border: 1px solid transparent;
+  outline: none;
+}
+
+.btn-primary {
+  background: rgba(209, 31, 31, 0.2);
+  border-color: var(--crimson-primary);
+  color: #fff;
+  box-shadow: 0 0 15px rgba(209, 31, 31, 0.25);
+}
+
+.btn-primary:hover {
+  background: var(--crimson-primary);
+  color: #fff;
+  box-shadow: 0 0 25px rgba(209, 31, 31, 0.6);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #eee;
+  backdrop-filter: blur(8px);
+}
+
+.btn-outline:hover {
+  border-color: var(--crimson-primary);
+  color: #fff;
+  background: rgba(209, 31, 31, 0.12);
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(209, 31, 31, 0.25);
+}
+
+.btn-sm {
+  padding: 0.48rem 1rem;
+  font-size: 0.76rem;
+}
+
+/* Badges & Pills */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.32rem 0.8rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.74rem;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #d1d1d6;
+  transition: all var(--transition-fast);
+}
+
+.pill:hover {
+  border-color: var(--crimson-border);
+  color: #fff;
+  background: var(--crimson-subtle);
+}
+
+.pill-primary {
+  background: rgba(209, 31, 31, 0.12);
+  border-color: rgba(209, 31, 31, 0.5);
+  color: #ff8585;
+}
+
+.pill-terminal {
+  font-family: var(--font-mono);
+  background: rgba(46, 213, 115, 0.08);
+  border-color: rgba(46, 213, 115, 0.3);
+  color: #2ed573;
+}
+
+/* Card Glass Base */
+.cyber-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 2.2rem;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.cyber-card:hover {
+  border-color: rgba(209, 31, 31, 0.4);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(209, 31, 31, 0.15);
+  transform: translateY(-4px);
+}
+
+/* Responsive utilities */
+@media (max-width: 1024px) {
+  .section {
+    padding: 4.5rem 0;
+  }
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 3.5rem 0;
+  }
+  .container {
+    padding: 0 1.2rem;
+  }
+  .section-title {
+    font-size: 1.75rem;
+  }
+}
