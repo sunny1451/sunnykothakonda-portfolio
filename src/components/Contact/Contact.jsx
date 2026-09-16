@@ -227,7 +227,7 @@ export default function Contact() {
 
                 {/* Portfolio */}
                 <a
-                  href="https://portfolio-sigma-navy-47.vercel.app/"
+                  href="https://sunnykothakonda-portfolio.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="contact-channel-item"
@@ -238,7 +238,7 @@ export default function Contact() {
                   </div>
                   <div className="channel-text">
                     <span className="channel-label">Live Portfolio</span>
-                    <span className="channel-val">portfolio-sigma-navy-47.vercel.app</span>
+                    <span className="channel-val">sunnykothakonda-portfolio.vercel.app</span>
                   </div>
                   <ArrowUpRight size={16} className="channel-arrow" />
                 </a>
