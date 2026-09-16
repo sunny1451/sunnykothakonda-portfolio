@@ -53,7 +53,7 @@ Visit my portfolio to explore my projects, skills, certifications, and cybersecu
 
 - LinkedIn: https://linkedin.com/in/sunny-kothakonda-13616a281
 - GitHub: https://github.com/sunny1451
-- Portfolio: https://portfolio-sigma-navy-47.vercel.app
+- Portfolio: https://sunnykothakonda-portfolio.vercel.app/
 - Email: sunnykothakonda4@gmail.com
 
 ---
