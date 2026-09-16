@@ -64,9 +64,20 @@ export default function Contact() {
     setSubmitStatus(null);
 
     try {
-      // Validate endpoint presence
+      // If Formspree endpoint is not configured, gracefully trigger mailto
       if (!formspreeEndpoint || !formspreeEndpoint.startsWith('http') || formspreeEndpoint.includes('YOUR_FORMSPREE_ENDPOINT')) {
-        throw new Error('Formspree endpoint not configured');
+        const mailtoUrl = `mailto:sunnykothakonda4@gmail.com?subject=${encodeURIComponent(
+          formData.subject.trim()
+        )}&body=${encodeURIComponent(
+          `Name: ${formData.name.trim()}\nEmail: ${formData.email.trim()}\n\nMessage:\n${formData.message.trim()}`
+        )}`;
+        window.location.href = mailtoUrl;
+        setSubmitStatus({
+          type: 'success',
+          message: 'Opening your default email client to send your message directly to Sunny!'
+        });
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        return;
       }
 
       const response = await fetch(formspreeEndpoint, {
@@ -87,16 +98,23 @@ export default function Contact() {
       if (response.ok) {
         setSubmitStatus({
           type: 'success',
-          message: 'Message sent successfully.'
+          message: 'Message transmitted successfully! Thank you for reaching out.'
         });
         setFormData({ name: '', email: '', subject: '', message: '' });
       } else {
         throw new Error(`Submission failed with status: ${response.status}`);
       }
     } catch (err) {
+      // If network fetch fails, offer direct mailto fallback
+      const mailtoUrl = `mailto:sunnykothakonda4@gmail.com?subject=${encodeURIComponent(
+        formData.subject.trim()
+      )}&body=${encodeURIComponent(
+        `Name: ${formData.name.trim()}\nEmail: ${formData.email.trim()}\n\nMessage:\n${formData.message.trim()}`
+      )}`;
+      window.location.href = mailtoUrl;
       setSubmitStatus({
-        type: 'error',
-        message: 'Unable to send your message. Please try again.'
+        type: 'info',
+        message: 'Direct transmission failed; opened your default email application to deliver message.'
       });
     } finally {
       setIsSubmitting(false);

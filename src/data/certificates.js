@@ -43,10 +43,26 @@ export const certificatesData = [
 export const educationData = [
   {
     institution: "Avanthi Institute of Engineering and Technology",
-    location: "Hyderabad, India",
+    location: "Hyderabad, Telangana, India",
     degree: "B.Tech in Computer Science (Cyber Security)",
-    duration: "2023 – 2027 | Expected",
+    duration: "2023 – 2027 | Expected (4th Year Ongoing)",
     status: "CGPA: 7.5 / 10",
     description: "Focused on core computer science foundations, operating systems, networking protocols, vulnerability assessment, and offensive penetration testing principles."
+  },
+  {
+    institution: "Govt. Polytechnic Parkal College",
+    location: "Parkal, Telangana, India",
+    degree: "Diploma — Engineering & Network Systems",
+    duration: "Completed",
+    status: "CGPA: 7.75 / 10",
+    description: "Foundational engineering, hardware systems, network configuration, and practical technical fundamentals."
+  },
+  {
+    institution: "Oxford English Medium High School",
+    location: "Telangana, India",
+    degree: "Secondary School Certificate (SSC)",
+    duration: "Completed",
+    status: "CGPA: 9.8 / 10",
+    description: "Schooling completed with high academic distinction and foundation in mathematics, science, and computers."
   }
 ];
